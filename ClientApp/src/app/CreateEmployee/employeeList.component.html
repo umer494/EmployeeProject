@@ -1,0 +1,20 @@
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee()">
+  <div class="form-group">
+    <label for="name" class="control-label">EmployeeId</label>
+    <input required id="employeeId" name="employeeId" [(ngModel)]="employee.employeeId" type="text" class="form-control" #name="ngModel" />
+  </div>
+  <div class="form-group">
+    <label for="name" class="control-label">EmployeeName</label>
+    <input required id="employeeName" name="employeeName" [(ngModel)]="employee.employeeName" type="text" class="form-control" #name="ngModel" />
+  </div>
+  <div class="form-group">
+    <label for="name" class="control-label">EmployeeLocation</label>
+    <input required id="employeeLocation" name="employeeLocation" [(ngModel)]="employee.employeeLocation" type="text" class="form-control" #name="ngModel" />
+  </div>
+  <div class="form-group">
+    <label for="name" class="control-label">PositionCode</label>
+    <input required id="positionCode" name="positionCode" [(ngModel)]="employee.positionCode" type="text" class="form-control" #rname="ngModel" />
+  </div>
+  <button type="submit" class="btn-btn-primry">Save</button>
+</form>
+Angular Generted Form Model:{{employeeForm.value | json}}

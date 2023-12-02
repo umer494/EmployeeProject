@@ -1,0 +1,40 @@
+<p style="text-align: center;background-color:gainsboro; color: black; font-size:large;"><b>Employ</b></p>
+<body>
+  <p *ngIf="!excans"><em>Loading....</em></p>
+
+  <table align="center" *ngIf="excans">
+
+    <thead>
+      <tr>
+        <th>EmployeeId</th>
+        <th>EmployeeName</th>
+        <th>EmployeeCountry</th>
+        <th>PositioCode</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let e of excans;">
+        <tr>
+          <td>{{e.employeeId}}</td>
+          <td>{{e.employeeName}}</td>
+          <td>{{e.employeeLocation}}</td>
+          <td>{{e.positionCode}}</td>
+        
+        </tr>
+      </ng-container>
+      <tr *ngIf="!excans">
+        <td colspan="5">
+          Loading Data please wait....
+        </td>
+      </tr>
+      <tr *ngIf="excans.length==0">
+        <td colspan="5">
+          No Data Found
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
